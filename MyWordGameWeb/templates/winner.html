@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block the_block %}
+	<h1>Winner</h1>
+	<p>Time: {{the_time}}</p>
+	<form action='/Win' method='POST'>
+		Enter name: <input type='text' name='name'>
+		<input type='submit' value='Submit'>
+	</form>
+	
+	<br>
+	<br>
+	<br>
+{% endblock %}

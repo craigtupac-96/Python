@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block the_block %}
+	<h1>Lets Play a Game!</h1>
+	<p>Rules:</p>
+	<p> 
+		Enter 7 words with 3 letters or more from the source word.<br> 
+		You cannot enter the source word as one of your words.<br> 
+		Your words must be separated by spaces.<br>
+		Do not leave a space after your 7th word.<br>
+	</p>
+	<form action='/game'>
+		<input type='submit' value='Play'>
+	</form>
+{% endblock %}

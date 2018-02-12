@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block the_block %}
+	<h1>Leaderboard</h1>
+	<table>
+    	<caption>Top 10</caption>
+		{% for item, i in the_leaderboard %}
+		<tr>
+			<td>{{loop.index}}</td>
+			<td>{{i}}</td>
+			<td>{{item}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	<p>Your position is: {{the_position}}</p>
+	<p>Time: {{the_time}}</p>
+	{% if the_position > 10 %}
+		<p>Better luck next time</p>
+	{% endif %}
+	{% if the_position <= 10 %}
+		<p>Congratulations</p>
+	{% endif %}
+	<form action='/game'>
+		<input type='submit' value='Play Again?'>
+	</form>
+{% endblock %}

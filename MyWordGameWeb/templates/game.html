@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block the_block %}
+	<h1>Time is ticking, lets go!</h1>
+
+	<p>Source word: {{ the_source }}</p>
+	<form action='/processform' method='POST'>
+		Input: <input type='text' name='user_input'>
+		<input type='submit' value='Go!'>
+	</form>
+	
+	<br>
+	<br>
+	<br>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block the_block %}
+	<h1>Unlucky, you must be a Trekkie!</h1>
+	<p>Unlucky you lost!</p>
+	<ul>
+		Your entries: {{user_words}}
+		{% for item in error_list %}
+		<li>{{item}}</li>
+		{% endfor %}
+	</ul>
+	<form action='/game'>
+		<input type='submit' value='Play Again?'>
+	</form>
+	<br>
+	<br>
+	<br>
+{% endblock %}
